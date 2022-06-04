@@ -5,4 +5,6 @@
     <string name="third_slide">Good Services</string>
 
     <string name="description">A comprehensive study guide which summarises the basic principles in pharmacy practice. Lecture Notes in Pharmacy Practice comprises 70 concise chapters covering clinical pharmacy in both community and hospital settings, as well as the practice of pharmacy in other areas.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

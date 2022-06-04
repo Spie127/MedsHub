@@ -1,4 +1,4 @@
-package com.example.medshub;
+package medshub.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -14,8 +14,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.SliderAdapter;
-import com.example.medshub.RegistrationActivity;
+import com.example.medshub.R;
+
+import medshub.adapters.SliderAdapter;
 
 public class OnBoardingActivity extends AppCompatActivity {
 

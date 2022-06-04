@@ -1,4 +1,4 @@
-package com.example.medshub;
+package medshub.example.medshub;
 
 import org.junit.Test;
 

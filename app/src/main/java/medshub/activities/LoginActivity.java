@@ -1,4 +1,4 @@
-package com.example.medshub;
+package medshub.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.medshub.MainActivity;
+import com.example.medshub.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getSupportActionBar().hide();
+        //getSupportActionBar().hide();
 
         auth=FirebaseAuth.getInstance();
         email=findViewById(R.id.email);
@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void signUp(View view) {
-        startActivity(new Intent(LoginActivity.this, com.example.medshub.RegistrationActivity.class));
+        startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
 
     }
 }
