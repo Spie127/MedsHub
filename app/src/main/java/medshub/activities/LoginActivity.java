@@ -31,19 +31,24 @@ public class LoginActivity extends AppCompatActivity {
         auth=FirebaseAuth.getInstance();
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
+        System.out.println("Hamro Auth vaxa kinai:");
+        System.out.println(auth);
 
     }
 
     public void signIn(View view) {
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        System.out.println("Sign in method  called");
         String userEmail=email.getText().toString();
         String userPassword=password.getText().toString();
+        System.out.println(userEmail);
+        System.out.println(userPassword);
 
         if(TextUtils.isEmpty(userEmail)){
             Toast.makeText(this, "Enter Email Address!",Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(userPassword)){
+        if(TextUtils.isEmpty(password.getText())){
             Toast.makeText(this, "Enter Password!",Toast.LENGTH_SHORT).show();
             return;
         }
@@ -52,18 +57,20 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
+
         auth.signInWithEmailAndPassword(userEmail,userPassword)
                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                           startActivity(new Intent(LoginActivity.this,MainActivity.class));
+//                           startActivity(new Intent(LoginActivity.this,MainActivity.class));
 
                         }else{
                             Toast.makeText(LoginActivity.this, "Error"+task.getException(), Toast.LENGTH_SHORT).show();
                         }
                     }
+
                 });
     }
 

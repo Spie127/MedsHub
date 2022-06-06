@@ -1,5 +1,6 @@
 package medshub.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -36,7 +37,7 @@ public class PopularProductsAdapter extends RecyclerView.Adapter<PopularProducts
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         Glide.with(context).load(popularProductsModelList.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(popularProductsModelList.get(position).getName());

@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedsHub">
         <activity
+            android:name="medshub.activities.AddAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name="medshub.activities.AddressActivity"
+            android:exported="false" />
+        <activity
             android:name="medshub.activities.CartActivity"
             android:exported="false" />
         <activity
